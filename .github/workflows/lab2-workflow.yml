@@ -21,9 +21,10 @@ jobs:
       - run: echo "Exploring Workflow Dispatch Trigger"
   job2:
     runs-on: ubuntu-latest
-    if:  ${{ inputs.run-job }} 
+    
     steps:
     - name: Printing run-job boolean value
+      if:  ${{ inputs.run-job }} 
       run: echo  The run job ID is  ${{ inputs.run-job }} 
     
     - name: Printing Custom Message
